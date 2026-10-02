@@ -1,0 +1,89 @@
+/* Helene Witte — schlichte Seite, keine Fremdinhalte, keine Cookies, kein Tracking. */
+@font-face {
+  font-family: "Andika";
+  src: url("Andika-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Andika";
+  src: url("Andika-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --creme: #fffdf5;
+  --gruen: #1f4d2b;
+  --text: #3a4a42;
+  --linie: #e3d9c2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--text);
+  font-family: "Andika", Verdana, sans-serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.innen { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+header {
+  background: var(--gruen);
+  color: #fffdf5;
+  padding: 34px 0 30px;
+  margin-bottom: 40px;
+}
+.marke { font-size: 34px; font-weight: 700; margin: 0; }
+.unter { margin: 6px 0 0; opacity: .85; font-size: 17px; }
+
+h1 { color: var(--gruen); font-size: 32px; margin: 0 0 6px; }
+h2 { color: var(--gruen); font-size: 26px; margin: 0 0 10px; }
+.band { font-size: 17px; margin: 0 0 18px; color: #6b7a70; }
+
+.buch { display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 46px; }
+.cover {
+  width: 300px; max-width: 100%; border: 3px solid var(--linie);
+  border-radius: 14px; display: block;
+}
+.buch .text { flex: 1 1 380px; }
+
+.ausmalen, .kontakt {
+  border: 3px solid var(--linie);
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin-bottom: 32px;
+  background: #fffefa;
+}
+.leise { font-size: 16px; color: #6b7a70; }
+
+.knopf-zeile { margin: 22px 0 6px; }
+.knopf {
+  display: inline-block;
+  background: var(--gruen);
+  color: #fffdf5;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 15px 26px;
+  border-radius: 999px;
+}
+.knopf:hover { background: #2a6a3c; }
+
+a { color: var(--gruen); }
+
+footer {
+  border-top: 2px solid var(--linie);
+  margin-top: 50px;
+  padding: 22px 0 30px;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  body { font-size: 18px; }
+  .cover { width: 100%; }
+  header { padding: 24px 0 22px; margin-bottom: 28px; }
+}
