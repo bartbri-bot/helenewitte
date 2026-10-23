@@ -43,7 +43,7 @@ header {
 
 h1 { color: var(--gruen); font-size: 32px; margin: 0 0 6px; }
 h2 { color: var(--gruen); font-size: 26px; margin: 0 0 10px; }
-.band { font-size: 17px; margin: 0 0 18px; color: #6b7a70; }
+.band { font-size: 17px; margin: 0 0 18px; color: #5a695f; }
 
 .buch { display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 46px; }
 .cover {
@@ -59,7 +59,7 @@ h2 { color: var(--gruen); font-size: 26px; margin: 0 0 10px; }
   margin-bottom: 32px;
   background: #fffefa;
 }
-.leise { font-size: 16px; color: #6b7a70; }
+.leise { font-size: 16px; color: #5a695f; }
 
 .knopf-zeile { margin: 22px 0 6px; }
 .knopf {
