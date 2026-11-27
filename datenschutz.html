@@ -55,6 +55,12 @@
        zu wissen, ob die Seite genutzt wird). <strong>Widerspruch:</strong> Wenn Sie nicht gezählt
        werden möchten, schalten Sie JavaScript in Ihrem Browser ab oder benutzen Sie einen
        Werbeblocker — die Seite funktioniert auch dann vollständig.</p>
+    <p>Zusätzlich läuft ein zweiter, sehr einfacher Zähler über den Dienst <strong>Abacus</strong>
+       (<a href="https://abacus.jasoncameron.dev">abacus.jasoncameron.dev</a>, USA). Dieser Zähler
+       speichert ausschließlich eine fortlaufende Zahl je Seite — keinen Browser, kein Land,
+       keinen Zeitpunkt und keine IP-Adresse. Aus ihm lese ich nur die Gesamtzahl der Aufrufe ab.
+       Rechtsgrundlage ist dieselbe (Art. 6 Abs. 1 Buchst. f DSGVO); auch ihn können Sie durch
+       Abschalten von JavaScript oder mit einem Werbeblocker verhindern.</p>
   </section>
 
   <section class="ausmalen">
@@ -107,5 +113,16 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  try {
+    var p = location.pathname.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
+    if (!p) p = 'start';
+    var base = 'https://abacus.jasoncameron.dev/hit/helenewitte/';
+    fetch(base + 'gesamt', { mode: 'cors' });
+    fetch(base + p, { mode: 'cors' });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

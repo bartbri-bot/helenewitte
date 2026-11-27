@@ -59,5 +59,16 @@
 
 <script data-goatcounter="https://bartbri.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  try {
+    var p = location.pathname.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
+    if (!p) p = 'start';
+    var base = 'https://abacus.jasoncameron.dev/hit/helenewitte/';
+    fetch(base + 'gesamt', { mode: 'cors' });
+    fetch(base + p, { mode: 'cors' });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
