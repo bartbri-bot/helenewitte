@@ -82,6 +82,59 @@ footer {
   font-size: 16px;
 }
 
+/* Sprungleiste mit den Baenden */
+.sprung {
+  background: #f3eee0;
+  border-top: 2px solid var(--linie);
+  border-bottom: 2px solid var(--linie);
+  margin-bottom: 34px;
+}
+.sprung .innen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 24px;
+}
+.sprung a {
+  display: inline-block;
+  background: #fffdf5;
+  border: 2px solid var(--linie);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--gruen);
+  font-size: 17px;
+}
+.sprung a:hover { background: var(--gruen); color: #fffdf5; border-color: var(--gruen); }
+
+.einleitung { font-size: 20px; margin: 0 0 42px; }
+
+/* Knoepfe untereinander, nicht nebeneinander */
+.knopf-liste { margin-top: 24px; }
+.knopf-liste .knopf {
+  display: block;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.knopf.zwei {
+  background: #fffdf5;
+  color: var(--gruen);
+  border: 3px solid var(--gruen);
+}
+.knopf.zwei:hover { background: #eef6ef; }
+.leise-link {
+  display: block;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .cover { width: 240px; }
+  .buch .text { flex: 1 1 300px; }
+  .buch { gap: 24px; }
+}
+
 @media (max-width: 700px) {
   body { font-size: 18px; }
   .cover { width: 100%; }
